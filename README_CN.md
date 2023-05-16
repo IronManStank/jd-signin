@@ -1,3 +1,7 @@
+</h1>
+<p align="center">
+    <a href="./README.md">English Descripton</a> | 中文介绍
+</p>
 # JingDong_AutoSignin
 Auto Sign in JD and daily check in.
 # 特色
