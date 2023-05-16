@@ -3,7 +3,7 @@
 
 import requests
 import re
-from Reslove_JD_Cookie import Resolve_Cookie
+from .Reslove_JD_Cookie import Resolve_Cookie
 import traceback
 
 
