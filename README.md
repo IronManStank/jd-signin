@@ -1,34 +1,34 @@
+
 # JingDong_AutoSignin
 Auto Sign in JD and daily check in.
-# 特色
-- [x] 自动签到
-- [x] 采用wx_push_services推送签到结果，可在企业微信端直接查看（该选项可选，非必选）。
-关于wx_push_services的配置方式，请移步![wx_push_services](https://github.com/IronManStank/WX-Push-Services)
-- [x] 采用GitHub Action定时运行，无需服务器，无需配置，开箱即用。
-- [x] 若采用本地服务器运行，可直接使用wx_push_services命令行推送方式推送消息，
-- [x] 采用JD_COOKIE解析引擎(Reslove_JD_Cookie)，自动解析JD_COOKIE，无需手动寻找pt_key,pt_pin。
-## 关于Reslove_JD_Cookie说明：
-它提供了三种获取`JD_COOKIE`的方式:
-1. 环境变量:会首先尝试从`JD_COOKIE`环境变量获取,如果存在则返回。我们非常推荐使用该种方式添加`COOKIE`。
-2. 本地文件:如果环境变量不存在,则尝试从当前目录下的`cookies.txt`文件获取。
-3. 手动输入:如果前两种方式都失败,则提示用户手动输入`JD_COOKIE`。
-
-## 用法
-1. 本地服务器运行：
-- 安装依赖:
-`pip install -r requirements.txt`
-- 运行
-`python Auto_SignIn.py`
-2. GitHub Action 运行：
-
-1. Fork该仓库到您的GitHub账号下
-2. 打开您Fork后的仓库,点击“Actions”
-3. 点击“Run workflow”开始运行GitHub Action
-
-## 交流反馈
-如果您在使用过程中有任何问题或建议,欢迎提issue与我交流。
-我会积极解答您的疑问,并持续优化和更新脚本,感谢您的使用与支持!
-## 最后
-如果出现问题,请重新配置JD_COOKIE或提issue与我交流解决。
-这个京东签到解决方案通过Cookie管理,签到脚本自动更新和推送提醒等一系列设计,实现真正意义上的全自动化签到。让我们无需每日手动签到,就能轻松完成所有的京东签到活动。
-希望它能带来便利,也让我们重拾对生活的简单欣赏。
+# Features
+- [x] Auto sign in
+- [x] Use wx_push_services to push sign-in results and view directly in Enterprise WeChat (optional, not required). For configuration of wx_push_services, please refer to ![wx_push_services](https://github.com/IronManStank/WX-Push-Services)
+- [x] Use GitHub Action to run on a schedule, no server required, no configuration required, ready to use. 
+- [x] If you use a local server, you can directly use the wx_push_services command line push method to push messages.
+- [x] Use the JD_COOKIE parsing engine (Reslove_JD_Cookie) to automatically parse JD_COOKIE without manually finding pt_key and pt_pin.
+## About Reslove_JD_Cookie:
+It provides three ways to get JD_COOKIE:
+1. Environment variable: First try to get from the JD_COOKIE environment variable. If it exists, return it. We highly recommend using this method to add COOKIE. 
+The way to add environment variables in GitHub Action is as follows:
+Add an environment variable named JD_COOKIE with a value of the obtained JD_COOKIE in the repository Settings->Secrets.
+2. Local file: If the environment variable does not exist, try to get from the cookies.txt file in the current directory. 
+3. Manual input: If the first two methods fail, prompt the user to manually enter JD_COOKIE.
+## Usage
+1. Run on a local server:
+- Install dependencies: 
+pip install -r requirements.txt
+- Refer to Reslove_JD_Cookie instructions to add JD_COOKIE
+- Run: 
+python Auto_SignIn.py
+2. Run on GitHub Action: 
+1. Fork this repository to your GitHub account 
+2. Open your forked repository and click "Actions" 
+3. Click "Run workflow" to run GitHub Action 
+## Communication Feedback
+If you have any questions or suggestions during use, please submit an issue to communicate with me. 
+I will actively answer your questions and continue to optimize and update the scripts. Thank you for your use and support!
+## Finally 
+If there is a problem, please reconfigure JD_COOKIE or submit an issue to communicate with me. 
+This JD sign-in solution implements truly automated sign-in through cookie management, automatic script updates, push notifications and a series of designs. It allows us to easily complete all JD sign-in activities without having to manually sign in every day. 
+I hope it can bring convenience and allow us to rediscover the simple pleasures of life.
