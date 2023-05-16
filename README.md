@@ -20,11 +20,13 @@ Add an environment variable named JD_COOKIE with a value of the obtained JD_COOK
 3. Manual input: If the first two methods fail, prompt the user to manually enter JD_COOKIE.
 ## Usage
 1. Run on a local server:
+- `git clone https://github.com/IronManStank/jd-signin.git`
 - Install dependencies: 
 pip install -r requirements.txt
 - Refer to Reslove_JD_Cookie instructions to add JD_COOKIE
 - Run: 
 python Auto_SignIn.py
+
 2. Run on GitHub Action: 
 1. Fork this repository to your GitHub account 
 2. Open your forked repository and click "Actions" 

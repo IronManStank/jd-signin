@@ -22,11 +22,13 @@ Github Action中添加环境变量的方式如下:
 
 ## 用法
 1. 本地服务器运行：
+- `git clone https://github.com/IronManStank/jd-signin.git`
 - 安装依赖:
 `pip install -r requirements.txt`
 - 参照Reslove_JD_Cookie说明添加JD_COOKIE
 - 运行
 `python Auto_SignIn.py`
+
 2. GitHub Action 运行：
 
 1. Fork该仓库到您的GitHub账号下
