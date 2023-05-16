@@ -1,5 +1,5 @@
-from Auto_SignIn import main
-from Resolve_JD_Cookie import Resolve_Cookie
+import Auto_SignIn 
+import Resolve_JD_Cookie 
 
 
-__all__=["main","Resolve_Cookie"]
+__all__=["Auto_SignIn","Resolve_JD_Cookie"]

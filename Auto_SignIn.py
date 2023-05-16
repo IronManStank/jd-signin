@@ -3,7 +3,7 @@
 
 import requests
 import re
-from .Reslove_JD_Cookie import Resolve_Cookie
+from Reslove_JD_Cookie import Resolve_Cookie
 import traceback
 
 
@@ -87,26 +87,30 @@ def main():
         info_dict = rc.resolve_cookie()
         pt_key, pt_pin = info_dict["pt_key"], info_dict["pt_pin"]
         matchs = _check_in(pt_key, pt_pin)
+        with open("./output.log", "a+") as f:
+            f.write(matchs)
+            print("当前程序运行结果已保存到output.log文件中")
+        try:
+            from WX_Push_Services import APP_PUSH
+
+            push = APP_PUSH()
+            push.send_message(message=matchs)
+        except ImportError:
+            print("推送服务异常")
+            print("请配置安装WX_Push_Services：pip install WX_Push_Services")
+
+            
+        except Exception:
+            print("推送服务异常")
+            traceback.print_exc()
+        finally:
+            pass
+
     except Exception as e:
         traceback.print_exc()
 
-    try:
-        from WX_Push_Services import APP_PUSH
 
-        push = APP_PUSH()
-        push.send_message(message=matchs)
-
-    except ImportError:
-        print("推送服务异常")
-        print("请配置安装WX_Push_Services：pip install WX_Push_Services")
-        with open("./output.log", "a+") as f:
-            f.write(match)
-        print("当前程序运行结果已保存到output.log文件中")
-    except Exception:
-        print("推送服务异常")
-        traceback.print_exc()
-    finally:
-        pass
+    
 
 
 if __name__ == "__main__":
