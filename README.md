@@ -1,4 +1,7 @@
-
+![GitHub issue custom search](https://img.shields.io/github/issues-search?query=jd-signin)
+![Fork](https://img.shields.io/github/forks/IronManStank/jd-signin.svg)
+![Star](https://img.shields.io/github/stars/IronManStank/jd-signin.svg)
+![PyPI - License](https://img.shields.io/pypi/l/jd-signin)
 <p align="center">
     English | <a href="./README_CN.md">中文介绍</a>
 </p>
